@@ -20,7 +20,7 @@ const PromptCardList = ({ data, handleTagClick }) => {
   )
 }
 
-const Feed = () => {
+const FeedComponent = () => {
 
   const [searchText, setSearchText] = useState('')
   const [posts, setPosts] = useState([])
@@ -100,12 +100,12 @@ const Feed = () => {
   )
 }
 
-const FeedComponent = () => {
+const Feed = () => {
   return (
       <Suspense>
-          <Feed />
+          <FeedComponent />
       </Suspense>
   )
 }
 
-export default FeedComponent
+export default Feed
