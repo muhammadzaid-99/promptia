@@ -68,9 +68,7 @@ const Feed = () => {
     const fetchPosts = async () => {
 
       const response = await fetch('/api/prompt', {
-        next: {
-          revalidate: 5
-        }
+        cache: 'no-store'
       })
       const data = await response.json()
       setPosts(data)
