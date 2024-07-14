@@ -1,4 +1,5 @@
 'use client'
+
 import { useState, useEffect, useRef } from 'react'
 import PromptCard from '@components/PromptCard'
 import { useSearchParams } from 'next/navigation'
@@ -18,7 +19,6 @@ const PromptCardList = ({ data, handleTagClick }) => {
     </div>
   )
 }
-
 
 const Feed = () => {
 
@@ -67,7 +67,11 @@ const Feed = () => {
   useEffect(() => {
     const fetchPosts = async () => {
 
-      const response = await fetch('/api/prompt')
+      const response = await fetch('/api/prompt', {
+        next: {
+          revalidate: 5
+        }
+      })
       const data = await response.json()
       setPosts(data)
       setFilteredPosts(data)
