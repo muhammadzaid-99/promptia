@@ -1,8 +1,8 @@
-import Feed from '@components/Feed'
+// import Feed from '@components/Feed'
 
-// import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';
 
-// const Feed = dynamic(() => import('@components/Feed'), { ssr: false });
+const Feed = dynamic(() => import('@components/Feed'), { ssr: false });
 
 
 const Home = () => {
