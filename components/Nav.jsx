@@ -51,6 +51,7 @@ const Nav = () => {
                                 width={37}
                                 height={37}
                                 alt="profile"
+                                className='rounded-full object-contain'
                             />
                             {/* {session?.user.name} */}
                         </Link>
@@ -81,6 +82,7 @@ const Nav = () => {
                             height={37}
                             alt="profile"
                             onClick={() => setToggleDropdown((prev) => !prev)}
+                            className='rounded-full object-contain'
                         />
                         {
                             toggleDropdown && (
