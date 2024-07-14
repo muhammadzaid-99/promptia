@@ -20,3 +20,6 @@ export const GET = async (req) => {
         return new Response(JSON.stringify({ error: error.message }), { status: 500 })
     }
 }
+
+// Opt out of caching for all data requests in the route segment
+export const dynamic = 'force-dynamic'
