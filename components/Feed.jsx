@@ -59,7 +59,7 @@ const Feed = () => {
 
   const handleTagClick = (tag) => {
     const filteredPosts = posts.filter((post) => post.tag == tag)
-    setPosts(filteredPosts)
+    setFilteredPosts(filteredPosts)
     router.push(`/?tag=${tag}`)
   }
 
