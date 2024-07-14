@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import PromptCard from '@components/PromptCard'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
+import { Suspense } from 'react'
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
@@ -97,4 +98,12 @@ const Feed = () => {
   )
 }
 
-export default Feed
+const FeedComponent = () => {
+  return (
+      <Suspense>
+          <Feed />
+      </Suspense>
+  )
+}
+
+export default FeedComponent

@@ -1,5 +1,5 @@
 import Feed from '@components/Feed'
-import { Suspense } from 'react'
+
 
 const Home = () => {
   return (
@@ -17,9 +17,8 @@ const Home = () => {
 
       </p>
 
-      <Suspense>
-        <Feed />
-      </Suspense>
+      <Feed />
+
 
     </section>
   )
