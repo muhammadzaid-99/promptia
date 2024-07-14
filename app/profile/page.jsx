@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
@@ -61,4 +61,12 @@ const MyProfile = () => {
     )
 }
 
-export default MyProfile
+const Page = () => {
+    return (
+        <Suspense>
+            <MyProfile />
+        </Suspense>
+    )
+}
+
+export default Page

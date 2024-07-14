@@ -1,12 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 
+
 import Profile from '@components/Profile'
 
-const MyProfile = () => {
+const UserProfile = () => {
 
     const { data: session } = useSession();
     const [posts, setPosts] = useState([])
@@ -59,4 +60,12 @@ const MyProfile = () => {
     )
 }
 
-export default MyProfile
+const Page = () => {
+    return (
+        <Suspense>
+            <UserProfile />
+        </Suspense>
+    )
+}
+
+export default Page
