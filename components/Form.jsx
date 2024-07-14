@@ -26,9 +26,9 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
 
         </label>
         <label className='font-satoshi font-semibold text-base text-gray-700'>
-          <span>Tag {' '}
-            <span className='font-normal'>
-              (#Product, #WebDev, #React)
+          <span>Tag {'   '}
+            <span className='font-sm'>
+              example: recipe essay product
             </span>
           </span>
 

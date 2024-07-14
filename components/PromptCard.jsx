@@ -33,7 +33,8 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
             className='rounded-full object-contain'
           />
 
-          <div className="flex flex-col">
+          {/* <div className="flex flex-col"> */}
+          <div className="flex w-full">
             <h3 className='font-satoshi font-semibold text-gray-900'>{post.name}</h3>
             {/* <p className='font-inter text-xs text-gray-500'>{post.email}</p> */}
           </div>
